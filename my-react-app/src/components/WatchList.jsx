@@ -1,20 +1,38 @@
 import "../index.css";
 import StockCard from "./StockCard.jsx";
 
-export default function WatchList(){
+export default function WatchList({onSend}){
+
+    const companies = [
+    "AAPL",   // Apple
+    "MSFT",   // Microsoft
+    "NVDA",   // NVIDIA
+    "TSLA",   // Tesla
+    "GOOGL",  // Alphabet (Google)
+    "AMZN",   // Amazon
+    "META",   // Meta (Facebook)
+    "XOM",    // ExxonMobil
+    "JNJ",    // Johnson & Johnson
+    "V",      // Visa
+    "WMT",    // Walmart
+    "JPM",    // JPMorgan Chase
+    "PG",     // Procter & Gamble
+    "DIS",    // Disney
+    "NFLX"    // Netflix
+    ];
+
     return(
-        <div className="border-2 border-red-500 w-[40%] flex flex-col">
-            <div className="text-white text-2xl flex justify-center items-center">
+        <div className="w-[40%] flex flex-col overflow-y-auto overflow-hidden">
+            <div className="text-white text-2xl flex justify-center items-center sticky top-0 bg-[#1c0357]">
                 WatchList
             </div>
-            <StockCard company="AAPL"/>
-            <StockCard company="MSFT"/>
-            <StockCard company="NVDA"/>       
-            <StockCard company="TSLA"/>
-            <StockCard company="GOOGL"/>
-            <StockCard company="AMZN"/>
-            <StockCard company="META"/>       
-            <StockCard company="XOM"/>   
+            {companies.map((company) => (
+            <StockCard
+                key={company}
+                company={company}
+                onClick={() => onSend(company)}  
+            />
+            ))} 
         </div>
     )
 }
