@@ -1,7 +1,7 @@
 # Stock Viewer Application
 
-A simple web application to view stock prices, company news, and AI-generated summaries. 
-The backend is built with Node.js, while the frontend is built with React and tailwind.
+A simple web application that calls on APIs to view stock prices, company news, and AI-generated summaries. 
+The backend is built with Node.js, while the frontend is built with React and Tailwind.
 
 ---
 
