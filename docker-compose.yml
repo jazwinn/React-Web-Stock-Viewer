@@ -2,6 +2,6 @@ services:
   backend:
     build: ./Server
     env_file:
-      - .env
+      - ./Server/.env
     ports:
-      - "${PORT}:${PORT}"
+      - "3301:3301"

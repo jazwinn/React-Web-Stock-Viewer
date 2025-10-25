@@ -49,3 +49,4 @@ pnpm-lock.yaml
 /my-react-app/dist
 /my-react-app/node_modules
 /Server/node_modules
+Server/.env
