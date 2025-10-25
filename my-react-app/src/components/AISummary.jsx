@@ -36,7 +36,7 @@ export default function AISummarry({URL}){
 
     if(loading){
         return(
-            <div className="border-2 border-green-500 w-full h-full text-white flex items-center justify-center">
+            <div className=" w-full h-full text-white flex items-center justify-center">
                 <p className="animate-pulse">Loading summary...</p>
             </div>
         )
